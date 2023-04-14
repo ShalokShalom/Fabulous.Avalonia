@@ -20,6 +20,7 @@
     <PackageVersion Include="Avalonia.iOS" Version="11.0.0-preview6" />
     <PackageVersion Include="Avalonia.Desktop" Version="11.0.0-preview6" />
     <PackageVersion Include="Avalonia.Browser" Version="11.0.0-preview6" />
+    <PackageVersion Include="Avalonia.Controls.DataGrid" Version="11.0.0-preview6" />
   </ItemGroup>
 
 </Project>
