@@ -41,6 +41,7 @@
     <Compile Include="Pages\ComboBoxPage.fs" />
     <Compile Include="Pages\ContextFlyoutPage.fs" />
     <Compile Include="Pages\ContextMenuPage.fs" />
+    <Compile Include="Pages\DataGridPage.fs" />
     <Compile Include="Pages\DockPanelPage.fs" />
     <Compile Include="Pages\DropDownButtonPage.fs" />
     <Compile Include="Pages\DrawingPage.fs" />
@@ -120,6 +121,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\Fabulous.Avalonia\Fabulous.Avalonia.fsproj" />
     <ProjectReference Include="..\..\src\Fabulous.Avalonia.Themes.Fluent\Fabulous.Avalonia.Themes.Fluent.fsproj" />
+    <ProjectReference Include="..\..\src\Fabulous.Avalonia.DataGrid\Fabulous.Avalonia.DataGrid.fsproj" />
   </ItemGroup>
 
   <ItemGroup>
