@@ -138,6 +138,15 @@ module View =
 
                     View.map ClippingPageMsg (ClippingPage.view model.ClippingPageModel)
                 }
+
+            | Pages.DialogsPage ->
+                VStack(spacing = 20.) {
+                    TextBlock("DialogsPage").fontSize(20.)
+                    Separator().background(SolidColorBrush(Colors.Gray))
+
+                    View.map DialogsPageMsg (DialogsPage.view model.DialogsPageModel)
+                }
+
             | Pages.DockPanelPage ->
                 VStack(spacing = 20.) {
                     TextBlock("DockPanelPage").fontSize(20.)

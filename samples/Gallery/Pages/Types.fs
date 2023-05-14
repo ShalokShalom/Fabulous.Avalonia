@@ -19,6 +19,7 @@ module Types =
         | ContextMenuPage
         | ContextFlyoutPage
         | ClippingPage
+        | DialogsPage
         | DockPanelPage
         | DropDownButtonPage
         | DrawingPage
@@ -89,6 +90,7 @@ module Types =
             | ContextMenuPage -> "ContextMenuPage"
             | ContextFlyoutPage -> "ContextFlyoutPage"
             | ClippingPage -> "ClippingPage"
+            | DialogsPage -> "DialogsPage"
             | DockPanelPage -> "DockPanelPage"
             | DropDownButtonPage -> "DropDownButtonPage"
             | DrawingPage -> "DrawingPage"
@@ -159,6 +161,7 @@ module Types =
           ContextMenuPageModel: ContextMenuPage.Model
           ContextFlyoutPageModel: ContextFlyoutPage.Model
           ClippingPageModel: ClippingPage.Model
+          DialogsPageModel: DialogsPage.Model
           DockPanelPageModel: DockPanelPage.Model
           DropDownButtonPageModel: DropDownButtonPage.Model
           DrawingPageModel: DrawingPage.Model
@@ -228,6 +231,7 @@ module Types =
         | ContextMenuPageMsg of ContextMenuPage.Msg
         | ContextFlyoutPageMsg of ContextFlyoutPage.Msg
         | ClippingPageMsg of ClippingPage.Msg
+        | DialogsPageMsg of DialogsPage.Msg
         | DockPanelPageMsg of DockPanelPage.Msg
         | DropDownButtonPageMsg of DropDownButtonPage.Msg
         | DrawingPageMsg of DrawingPage.Msg

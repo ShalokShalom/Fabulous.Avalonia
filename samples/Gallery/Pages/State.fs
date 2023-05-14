@@ -24,6 +24,7 @@ module State =
           ContextMenuPageModel = ContextMenuPage.init()
           ContextFlyoutPageModel = ContextFlyoutPage.init()
           ClippingPageModel = ClippingPage.init()
+          DialogsPageModel = DialogsPage.init()
           DockPanelPageModel = DockPanelPage.init()
           DropDownButtonPageModel = DropDownButtonPage.init()
           DrawingPageModel = DrawingPage.init()
@@ -144,6 +145,11 @@ module State =
         | ClippingPageMsg msg ->
             { model with
                 ClippingPageModel = ClippingPage.update msg model.ClippingPageModel },
+            Cmd.none
+
+        | DialogsPageMsg msg ->
+            { model with
+                DialogsPageModel = DialogsPage.update msg model.DialogsPageModel },
             Cmd.none
         | DockPanelPageMsg msg ->
             { model with

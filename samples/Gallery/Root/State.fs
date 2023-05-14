@@ -26,6 +26,7 @@ module State =
            Pages.ContextMenuPage
            Pages.ContextFlyoutPage
            Pages.ClippingPage
+           Pages.DialogsPage
            Pages.DockPanelPage
            Pages.DropDownButtonPage
            Pages.DrawingPage
