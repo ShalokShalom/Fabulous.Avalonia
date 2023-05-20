@@ -348,40 +348,51 @@ module AutoCompleteBoxPage =
             UniformGrid() {
                 VStack() {
                     TextBlock("MinimumPrefixLength: 1")
-                    AutoCompleteBox("Select an item", model.Capitals).minimumPrefixLength(1)
+
+                    AutoCompleteBox("", model.Capitals)
+                        .waterMark("Select an item")
+                        .minimumPrefixLength(1)
                 }
 
                 VStack() {
                     TextBlock("MinimumPrefixLength: 3")
-                    AutoCompleteBox("Select an item", model.Items).minimumPrefixLength(3)
+
+                    AutoCompleteBox("", model.Items)
+                        .minimumPrefixLength(3)
+                        .waterMark("Select an item")
                 }
 
                 VStack() {
                     TextBlock("MinimumPopulateDelay: 1s")
 
-                    AutoCompleteBox("Select an item", model.Items)
+                    AutoCompleteBox("", model.Items)
+                        .waterMark("Select an item")
                         .minimumPopulateDelay(TimeSpan.FromSeconds(1.0))
                 }
 
                 VStack() {
                     TextBlock("MaxDropDownHeight: 60")
-                    AutoCompleteBox("Select an item", model.Items).maxDropDownHeight(60.0)
+
+                    AutoCompleteBox("", model.Items)
+                        .waterMark("Select an item")
+                        .maxDropDownHeight(60.0)
                 }
 
                 VStack() {
                     TextBlock("Watermark")
-                    AutoCompleteBox("Select an item", model.Items)
+                    AutoCompleteBox("", model.Items).waterMark("Select an item")
                 }
 
                 VStack() {
                     TextBlock("Disabled")
-                    AutoCompleteBox("Select an item", model.Items).isEnabled(false)
+                    AutoCompleteBox("", model.Items).waterMark("Select an item").isEnabled(false)
                 }
 
                 VStack() {
                     TextBlock("Multi-Binding")
 
-                    AutoCompleteBox("Select an item", model.Capitals)
+                    AutoCompleteBox("", model.Capitals)
+                        .waterMark("Select an item")
                         .reference(multiBindingBoxRef)
                         .filterMode(AutoCompleteFilterMode.Contains)
                         .onLoaded(MultiBindingLoaded)
@@ -390,24 +401,26 @@ module AutoCompleteBoxPage =
                 VStack() {
                     TextBlock("AsyncBox")
 
-                    AutoCompleteBox("Select an item", getItemsAsync)
+                    AutoCompleteBox("", getItemsAsync)
+                        .waterMark("Select an item")
                         .filterMode(AutoCompleteFilterMode.Contains)
                 }
 
                 VStack() {
                     TextBlock("Custom AutoComplete")
 
-                    AutoCompleteBox("Select an item", model.Custom)
+                    AutoCompleteBox("", model.Custom)
+                        .waterMark("Select an item")
                         .reference(customAutoCompleteBoxRef)
                         .filterMode(AutoCompleteFilterMode.None)
                         .onLoaded(CustomAutoBoxLoaded)
-
                 }
 
                 VStack() {
                     TextBlock("With Validation Errors")
 
-                    AutoCompleteBox("Select an item", model.Items)
+                    AutoCompleteBox("", model.Items)
+                        .waterMark("Select an item")
                         .name("ValidationErrors")
                         .filterMode(AutoCompleteFilterMode.None)
                         .dataValidationErrors([ Exception() ])

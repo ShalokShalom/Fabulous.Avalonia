@@ -148,9 +148,10 @@ module State =
             Cmd.none
 
         | DialogsPageMsg msg ->
+            let update, cmd = DialogsPage.update msg model.DialogsPageModel
             { model with
-                DialogsPageModel = DialogsPage.update msg model.DialogsPageModel },
-            Cmd.none
+                DialogsPageModel = update },
+            cmd
         | DockPanelPageMsg msg ->
             { model with
                 DockPanelPageModel = DockPanelPage.update msg model.DockPanelPageModel },
