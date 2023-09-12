@@ -6,6 +6,7 @@ open Fabulous
 open Fabulous.StackAllocatedCollections
 open Fabulous.StackAllocatedCollections.StackList
 open Fabulous.Avalonia
+open Gallery
 open Gallery.Pages
 open Types
 
@@ -41,8 +42,17 @@ module HamburgerMenu =
                 TabItem("AdornerLayerPage", AnyView(View.map AdornerLayerPageMsg (AdornerLayerPage.view model.AdornerLayerPageModel)))
                 TabItem("AutoCompleteBoxPage", AnyView(View.map AutoCompleteBoxPageMsg (AutoCompleteBoxPage.view model.AutoCompleteBoxPageModel)))
                 TabItem("AnimationsPage", AnyView(View.map AnimationsPageMsg (AnimationsPage.view model.AnimationsPageModel)))
-                TabItem("ImplicitCanvasAnimationsPage", AnyView(View.map ImplicitCanvasAnimationsPageMsg (ImplicitCanvasAnimationsPage.view model.ImplicitCanvasAnimationsPageModel)))
-                TabItem("CompositorAnimationsPage", AnyView(View.map CompositorAnimationsPageMsg (CompositorAnimationsPage.view model.CompositorAnimationsPageModel)))
+
+                TabItem(
+                    "ImplicitCanvasAnimationsPage",
+                    AnyView(View.map ImplicitCanvasAnimationsPageMsg (ImplicitCanvasAnimationsPage.view model.ImplicitCanvasAnimationsPageModel))
+                )
+
+                TabItem(
+                    "CompositorAnimationsPage",
+                    AnyView(View.map CompositorAnimationsPageMsg (CompositorAnimationsPage.view model.CompositorAnimationsPageModel))
+                )
+
                 TabItem("ButtonsPage", AnyView(View.map ButtonsPageMsg (ButtonsPage.view model.ButtonsPageModel)))
                 TabItem("BrushesPage", AnyView(View.map BrushesPageMsg (BrushesPage.view model.BrushesPageModel)))
                 TabItem("ButtonSpinnerPage", AnyView(View.map ButtonSpinnerPageMsg (ButtonSpinnerPage.view model.ButtonSpinnerPageModel)))
@@ -73,8 +83,17 @@ module HamburgerMenu =
                 TabItem("GridSplitterPage", AnyView(View.map GridSplitterPageMsg (GridSplitterPage.view model.GridSplitterPageModel)))
                 TabItem("ImagePage", AnyView(View.map ImagePageMsg (ImagePage.view model.ImagePageModel)))
                 TabItem("LabelPage", AnyView(View.map LabelPageMsg (LabelPage.view model.LabelPageModel)))
-                TabItem("LayoutTransformControlPage", AnyView(View.map LayoutTransformControlPageMsg (LayoutTransformControlPage.view model.LayoutTransformControlPageModel)))
-                TabItem("LineBoundsDemoControlPage", AnyView(View.map LineBoundsDemoControlPageMsg (LineBoundsDemoControlPage.view model.LineBoundsDemoControlPageModel)))
+
+                TabItem(
+                    "LayoutTransformControlPage",
+                    AnyView(View.map LayoutTransformControlPageMsg (LayoutTransformControlPage.view model.LayoutTransformControlPageModel))
+                )
+
+                TabItem(
+                    "LineBoundsDemoControlPage",
+                    AnyView(View.map LineBoundsDemoControlPageMsg (LineBoundsDemoControlPage.view model.LineBoundsDemoControlPageModel))
+                )
+
                 TabItem("ListBoxPage", AnyView(View.map ListBoxPageMsg (ListBoxPage.view model.ListBoxPageModel)))
                 TabItem("MenuFlyoutPage", AnyView(View.map MenuFlyoutPageMsg (MenuFlyoutPage.view model.MenuFlyoutPageModel)))
                 TabItem("MaskedTextBoxPage", AnyView(View.map MaskedTextBoxPageMsg (MaskedTextBoxPage.view model.MaskedTextBoxPageModel)))
@@ -91,7 +110,12 @@ module HamburgerMenu =
                 TabItem("RepeatButtonPage", AnyView(View.map RepeatButtonPageMsg (RepeatButtonPage.view model.RepeatButtonPageModel)))
                 TabItem("RadioButtonPage", AnyView(View.map RadioButtonPageMsg (RadioButtonPage.view model.RadioButtonPageModel)))
                 TabItem("RefreshContainerPage", AnyView(View.map RefreshContainerPageMsg (RefreshContainerPage.view model.RefreshContainerPageModel)))
-                TabItem("SelectableTextBlockPage", AnyView(View.map SelectableTextBlockPageMsg (SelectableTextBlockPage.view model.SelectableTextBlockPageModel)))
+
+                TabItem(
+                    "SelectableTextBlockPage",
+                    AnyView(View.map SelectableTextBlockPageMsg (SelectableTextBlockPage.view model.SelectableTextBlockPageModel))
+                )
+
                 TabItem("SplitButtonPage", AnyView(View.map SplitButtonPageMsg (SplitButtonPage.view model.SplitButtonPageModel)))
                 TabItem("SliderPage", AnyView(View.map SliderPageMsg (SliderPage.view model.SliderPageModel)))
                 TabItem("ShapesPage", AnyView(View.map ShapesPageMsg (ShapesPage.view model.ShapesPageModel)))
@@ -114,118 +138,118 @@ module HamburgerMenu =
                 TabItem("ThemeAwarePage", AnyView(View.map ThemeAwarePageMsg (ThemeAwarePage.view model.ThemeAwarePageModel)))
                 TabItem("UniformGridPage", AnyView(View.map UniformGridPageMsg (UniformGridPage.view model.UniformGridPageModel)))
                 TabItem("ViewBoxPage", AnyView(View.map ViewBoxPageMsg (ViewBoxPage.view model.ViewBoxPageModel)))
-         
-            }//.onSelectionChanged(OnSelectionChanged)
-            
-            // Button("Settings", Settings)
-            //     .style(settingsButtonStyle)
-            //     .gridRow(1)
-            //     .flyout(
-            //         Flyout(
-            //             VStack() {
-            //                 (ComboBox() {
-            //                     ComboBoxItem("None")
-            //                     ComboBoxItem("BorderOnly")
-            //                     ComboBoxItem("Full")
-            //                 })
-            //                     .horizontalAlignment(HorizontalAlignment.Stretch)
-            //                     .placeholderText("Decorations")
-            //                     .onSelectionChanged(DecorationsOnSelectionChanged)
-            //
-            //                 ComboBox(model.ThemeVariants, (fun i -> TextBlock(i.ToString())))
-            //                     .horizontalAlignment(HorizontalAlignment.Stretch)
-            //                     .placeholderText("Themes")
-            //                     .onSelectionChanged(ThemeVariantsOnSelectionChanged)
-            //
-            //                 ComboBox(model.FlowDirections, (fun x -> TextBlock(x.ToString())))
-            //                     .horizontalAlignment(HorizontalAlignment.Stretch)
-            //                     .placeholderText("FlowDirections")
-            //                     .onSelectionChanged(FlowDirectionsOnSelectionChanged)
-            //
-            //                 (ComboBox() {
-            //                     ComboBoxItem("Fluent")
-            //                     ComboBoxItem("Simple")
-            //                 })
-            //                     .horizontalAlignment(HorizontalAlignment.Stretch)
-            //                     .selectedIndex(0)
-            //
-            //                 ComboBox(model.TransparencyLevels, (fun x -> TextBlock(x.ToString())))
-            //                     .horizontalAlignment(HorizontalAlignment.Stretch)
-            //                     .placeholderText("TransparencyLevels")
-            //                     .onSelectionChanged(TransparencyLevelsOnSelectionChanged)
-            //
-            //                 (ComboBox() {
-            //                     ComboBoxItem("Normal")
-            //                     ComboBoxItem("Minimized")
-            //                     ComboBoxItem("Maximized")
-            //                     ComboBoxItem("FullScreen")
-            //                 })
-            //                     .horizontalAlignment(HorizontalAlignment.Stretch)
-            //                     .selectedIndex(0)
-            //             }
-            //         )
-            //     )
+
+            }
+
+        // Button("Settings", Settings)
+        //     .style(settingsButtonStyle)
+        //     .gridRow(1)
+        //     .flyout(
+        //         Flyout(
+        //             VStack() {
+        //                 (ComboBox() {
+        //                     ComboBoxItem("None")
+        //                     ComboBoxItem("BorderOnly")
+        //                     ComboBoxItem("Full")
+        //                 })
+        //                     .horizontalAlignment(HorizontalAlignment.Stretch)
+        //                     .placeholderText("Decorations")
+        //                     .onSelectionChanged(DecorationsOnSelectionChanged)
+        //
+        //                 ComboBox(model.ThemeVariants, (fun i -> TextBlock(i.ToString())))
+        //                     .horizontalAlignment(HorizontalAlignment.Stretch)
+        //                     .placeholderText("Themes")
+        //                     .onSelectionChanged(ThemeVariantsOnSelectionChanged)
+        //
+        //                 ComboBox(model.FlowDirections, (fun x -> TextBlock(x.ToString())))
+        //                     .horizontalAlignment(HorizontalAlignment.Stretch)
+        //                     .placeholderText("FlowDirections")
+        //                     .onSelectionChanged(FlowDirectionsOnSelectionChanged)
+        //
+        //                 (ComboBox() {
+        //                     ComboBoxItem("Fluent")
+        //                     ComboBoxItem("Simple")
+        //                 })
+        //                     .horizontalAlignment(HorizontalAlignment.Stretch)
+        //                     .selectedIndex(0)
+        //
+        //                 ComboBox(model.TransparencyLevels, (fun x -> TextBlock(x.ToString())))
+        //                     .horizontalAlignment(HorizontalAlignment.Stretch)
+        //                     .placeholderText("TransparencyLevels")
+        //                     .onSelectionChanged(TransparencyLevelsOnSelectionChanged)
+        //
+        //                 (ComboBox() {
+        //                     ComboBoxItem("Normal")
+        //                     ComboBoxItem("Minimized")
+        //                     ComboBoxItem("Maximized")
+        //                     ComboBoxItem("FullScreen")
+        //                 })
+        //                     .horizontalAlignment(HorizontalAlignment.Stretch)
+        //                     .selectedIndex(0)
+        //             }
+        //         )
+        //     )
         }
-        // Grid() {
-        //     SplitView(
-        //         paneContent(model),
-        //         (Dock() {
-        //             let headerLeftMargin = if model.IsPanOpen then 12. else 52.
-        //
-        //             Border(
-        //                 TextBlock(model.HeaderText)
-        //                     .classes([ "h3" ])
-        //                     .verticalAlignment(VerticalAlignment.Center)
-        //                     .margin(Thickness(headerLeftMargin, 0., 0., 0.))
-        //                     .transition(
-        //                         ThicknessTransition(TextBlock.MarginProperty, TimeSpan.FromSeconds(1.))
-        //                             .easing(Easing.Parse("0.1, 0.9, 0.2, 1.0"))
-        //                     )
-        //             )
-        //                 .dock(Dock.Top)
-        //                 .background(Brushes.Transparent)
-        //
-        //             let cornerRadius = if model.IsPanOpen then 8. else 0.
-        //
-        //             Border(
-        //                 Border(
-        //                     match model.Navigation.CurrentPage with
-        //                     // ScrollBarPageModel does not work when wrapped in a ScrollViewer
-        //                     | ScrollBarPageModel _ -> AnyView(NavigationState.view SubpageMsg model.Navigation.CurrentPage)
-        //                     | _ ->
-        //                         AnyView(
-        //                             ScrollViewer(NavigationState.view SubpageMsg model.Navigation.CurrentPage)
-        //                                 .verticalScrollBarVisibility(ScrollBarVisibility.Auto)
-        //                                 .horizontalScrollBarVisibility(ScrollBarVisibility.Auto)
-        //                                 .background(Brushes.Transparent)
-        //                                 .padding(Thickness(16.))
-        //                         )
-        //                 )
-        //                     .margin(Thickness(4., 0., 0., 0.))
-        //                     .cornerRadius(CornerRadius(cornerRadius, 0., 0., 0.))
-        //                     .boxShadow("0 0 1 1 #2000")
-        //                     .transition(CornerRadiusTransition(Border.CornerRadiusProperty, TimeSpan.FromSeconds(1.)))
-        //             )
-        //         })
-        //             .background(Brushes.Transparent)
-        //     )
-        //         .isPresented(model.IsPanOpen, OpenPanChanged)
-        //         .displayMode(SplitViewDisplayMode.Inline)
-        //         .panePlacement(SplitViewPanePlacement.Left)
-        //         .paneBackground(Brushes.Transparent)
-        //
-        //     ToggleButton(
-        //         model.IsPanOpen,
-        //         OpenPanChanged,
-        //         PathIcon(Paths.Path3)
-        //             .foreground(ThemeAware.With(Brush.Parse("#99000000"), Brush.Parse("#99FFFFFF")))
-        //     )
-        //         .width(40.)
-        //         .height(32.)
-        //         .margin(4., 2., 0., 0.)
-        //         .padding(0.)
-        //         .horizontalAlignment(HorizontalAlignment.Left)
-        //         .verticalAlignment(VerticalAlignment.Top)
-        //         .horizontalContentAlignment(HorizontalAlignment.Center)
-        //         .cornerRadius(4.)
-        // }
+// Grid() {
+//     SplitView(
+//         paneContent(model),
+//         (Dock() {
+//             let headerLeftMargin = if model.IsPanOpen then 12. else 52.
+//
+//             Border(
+//                 TextBlock(model.HeaderText)
+//                     .classes([ "h3" ])
+//                     .verticalAlignment(VerticalAlignment.Center)
+//                     .margin(Thickness(headerLeftMargin, 0., 0., 0.))
+//                     .transition(
+//                         ThicknessTransition(TextBlock.MarginProperty, TimeSpan.FromSeconds(1.))
+//                             .easing(Easing.Parse("0.1, 0.9, 0.2, 1.0"))
+//                     )
+//             )
+//                 .dock(Dock.Top)
+//                 .background(Brushes.Transparent)
+//
+//             let cornerRadius = if model.IsPanOpen then 8. else 0.
+//
+//             Border(
+//                 Border(
+//                     match model.Navigation.CurrentPage with
+//                     // ScrollBarPageModel does not work when wrapped in a ScrollViewer
+//                     | ScrollBarPageModel _ -> AnyView(NavigationState.view SubpageMsg model.Navigation.CurrentPage)
+//                     | _ ->
+//                         AnyView(
+//                             ScrollViewer(NavigationState.view SubpageMsg model.Navigation.CurrentPage)
+//                                 .verticalScrollBarVisibility(ScrollBarVisibility.Auto)
+//                                 .horizontalScrollBarVisibility(ScrollBarVisibility.Auto)
+//                                 .background(Brushes.Transparent)
+//                                 .padding(Thickness(16.))
+//                         )
+//                 )
+//                     .margin(Thickness(4., 0., 0., 0.))
+//                     .cornerRadius(CornerRadius(cornerRadius, 0., 0., 0.))
+//                     .boxShadow("0 0 1 1 #2000")
+//                     .transition(CornerRadiusTransition(Border.CornerRadiusProperty, TimeSpan.FromSeconds(1.)))
+//             )
+//         })
+//             .background(Brushes.Transparent)
+//     )
+//         .isPresented(model.IsPanOpen, OpenPanChanged)
+//         .displayMode(SplitViewDisplayMode.Inline)
+//         .panePlacement(SplitViewPanePlacement.Left)
+//         .paneBackground(Brushes.Transparent)
+//
+//     ToggleButton(
+//         model.IsPanOpen,
+//         OpenPanChanged,
+//         PathIcon(Paths.Path3)
+//             .foreground(ThemeAware.With(Brush.Parse("#99000000"), Brush.Parse("#99FFFFFF")))
+//     )
+//         .width(40.)
+//         .height(32.)
+//         .margin(4., 2., 0., 0.)
+//         .padding(0.)
+//         .horizontalAlignment(HorizontalAlignment.Left)
+//         .verticalAlignment(VerticalAlignment.Top)
+//         .horizontalContentAlignment(HorizontalAlignment.Center)
+//         .cornerRadius(4.)
+// }

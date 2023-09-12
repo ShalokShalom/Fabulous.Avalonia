@@ -1,8 +1,6 @@
 namespace Gallery.Root
 
 open Avalonia.Controls
-open Avalonia.Interactivity
-open Avalonia
 open System
 open Avalonia.Media
 open Avalonia.Styling
@@ -11,88 +9,87 @@ open Gallery.Pages
 module Types =
     type Model =
         { AcrylicPageModel: AcrylicPage.Model
-          AdornerLayerPageModel : AdornerLayerPage.Model
-          AutoCompleteBoxPageModel : AutoCompleteBoxPage.Model
-          AnimationsPageModel : AnimationsPage.Model
-          ImplicitCanvasAnimationsPageModel : ImplicitCanvasAnimationsPage.Model
-          CompositorAnimationsPageModel : CompositorAnimationsPage.Model
-          ButtonsPageModel : ButtonsPage.Model
-          BrushesPageModel : BrushesPage.Model
-          ButtonSpinnerPageModel : ButtonSpinnerPage.Model
-          BorderPageModel : BorderPage.Model
-          CalendarPageModel : CalendarPage.Model
-          CalendarDatePickerPageModel : CalendarDatePickerPage.Model
-          CanvasPageModel : CanvasPage.Model
-          CheckBoxPageModel : CheckBoxPage.Model
-          CarouselPageModel : CarouselPage.Model
-          ComboBoxPageModel : ComboBoxPage.Model
-          CompositionPageModel : CompositionPage.Model
-          ContextMenuPageModel : ContextMenuPage.Model
-          ContextFlyoutPageModel : ContextFlyoutPage.Model
-          ClippingPageModel : ClippingPage.Model
-          ClipboardPageModel : ClipboardPage.Model
-          DialogsPageModel : DialogsPage.Model
-          DragAndDropPageModel : DragAndDropPage.Model
-          DockPanelPageModel : DockPanelPage.Model
-          DropDownButtonPageModel : DropDownButtonPage.Model
-          DrawingPageModel : DrawingPage.Model
-          DrawLineAnimationPageModel : DrawLineAnimationPage.Model
-          EffectsPageModel : EffectsPage.Model
-          ExpanderPageModel : ExpanderPage.Model
-          FlyoutPageModel : FlyoutPage.Model
-          GesturesPageModel : GesturesPage.Model
-          GeometriesPageModel : GeometriesPage.Model
-          GridPageModel : GridPage.Model
-          GridSplitterPageModel : GridSplitterPage.Model
-          ImagePageModel : ImagePage.Model
-          LabelPageModel : LabelPage.Model
-          LayoutTransformControlPageModel : LayoutTransformControlPage.Model
-          LineBoundsDemoControlPageModel : LineBoundsDemoControlPage.Model
-          ListBoxPageModel : ListBoxPage.Model
-          MenuFlyoutPageModel : MenuFlyoutPage.Model
-          MaskedTextBoxPageModel : MaskedTextBoxPage.Model
-          MenuPageModel : MenuPage.Model
-          NumericUpDownPageModel : NumericUpDownPage.Model
-          NotificationsPageModel : NotificationsPage.Model
-          OpenGLPageModel : OpenGLPage.Model
-          ProgressBarPageModel : ProgressBarPage.Model
-          PanelPageModel : PanelPage.Model
-          PathIconPageModel : PathIconPage.Model
-          PointersPageModel : PointersPage.Model
-          PopupPageModel : PopupPage.Model
-          PageTransitionsPageModel : PageTransitionsPage.Model
-          RepeatButtonPageModel : RepeatButtonPage.Model
-          RadioButtonPageModel : RadioButtonPage.Model
-          RefreshContainerPageModel : RefreshContainerPage.Model
-          SelectableTextBlockPageModel : SelectableTextBlockPage.Model
-          SplitButtonPageModel : SplitButtonPage.Model
-          SliderPageModel : SliderPage.Model
-          ShapesPageModel : ShapesPage.Model
-          ScrollBarPageModel : ScrollBarPage.Model
-          SplitViewPageModel : SplitViewPage.Model
-          StackPanelPageModel : StackPanelPage.Model
-          StylesPageModel : StylesPage.Model
-          ScrollViewerPageModel : ScrollViewerPage.Model
-          ToggleSplitButtonPageModel : ToggleSplitButtonPage.Model
-          TextBlockPageModel : TextBlockPage.Model
-          TextBoxPageModel : TextBoxPage.Model
-          TickBarPageModel : TickBarPage.Model
-          ToggleSwitchPageModel : ToggleSwitchPage.Model
-          ToggleButtonPageModel : ToggleButtonPage.Model
-          ToolTipPageModel : ToolTipPage.Model
-          TabControlPageModel : TabControlPage.Model
-          TabStripPageModel : TabStripPage.Model
-          TransitionsPageModel : TransitionsPage.Model
-          TransformsPageModel : TransformsPage.Model
-          ThemeAwarePageModel : ThemeAwarePage.Model
-          UniformGridPageModel : UniformGridPage.Model
-          ViewBoxPageModel : ViewBoxPage.Model
+          AdornerLayerPageModel: AdornerLayerPage.Model
+          AutoCompleteBoxPageModel: AutoCompleteBoxPage.Model
+          AnimationsPageModel: AnimationsPage.Model
+          ImplicitCanvasAnimationsPageModel: ImplicitCanvasAnimationsPage.Model
+          CompositorAnimationsPageModel: CompositorAnimationsPage.Model
+          ButtonsPageModel: ButtonsPage.Model
+          BrushesPageModel: BrushesPage.Model
+          ButtonSpinnerPageModel: ButtonSpinnerPage.Model
+          BorderPageModel: BorderPage.Model
+          CalendarPageModel: CalendarPage.Model
+          CalendarDatePickerPageModel: CalendarDatePickerPage.Model
+          CanvasPageModel: CanvasPage.Model
+          CheckBoxPageModel: CheckBoxPage.Model
+          CarouselPageModel: CarouselPage.Model
+          ComboBoxPageModel: ComboBoxPage.Model
+          CompositionPageModel: CompositionPage.Model
+          ContextMenuPageModel: ContextMenuPage.Model
+          ContextFlyoutPageModel: ContextFlyoutPage.Model
+          ClippingPageModel: ClippingPage.Model
+          ClipboardPageModel: ClipboardPage.Model
+          DialogsPageModel: DialogsPage.Model
+          DragAndDropPageModel: DragAndDropPage.Model
+          DockPanelPageModel: DockPanelPage.Model
+          DropDownButtonPageModel: DropDownButtonPage.Model
+          DrawingPageModel: DrawingPage.Model
+          DrawLineAnimationPageModel: DrawLineAnimationPage.Model
+          EffectsPageModel: EffectsPage.Model
+          ExpanderPageModel: ExpanderPage.Model
+          FlyoutPageModel: FlyoutPage.Model
+          GesturesPageModel: GesturesPage.Model
+          GeometriesPageModel: GeometriesPage.Model
+          GridPageModel: GridPage.Model
+          GridSplitterPageModel: GridSplitterPage.Model
+          ImagePageModel: ImagePage.Model
+          LabelPageModel: LabelPage.Model
+          LayoutTransformControlPageModel: LayoutTransformControlPage.Model
+          LineBoundsDemoControlPageModel: LineBoundsDemoControlPage.Model
+          ListBoxPageModel: ListBoxPage.Model
+          MenuFlyoutPageModel: MenuFlyoutPage.Model
+          MaskedTextBoxPageModel: MaskedTextBoxPage.Model
+          MenuPageModel: MenuPage.Model
+          NumericUpDownPageModel: NumericUpDownPage.Model
+          NotificationsPageModel: NotificationsPage.Model
+          OpenGLPageModel: OpenGLPage.Model
+          ProgressBarPageModel: ProgressBarPage.Model
+          PanelPageModel: PanelPage.Model
+          PathIconPageModel: PathIconPage.Model
+          PointersPageModel: PointersPage.Model
+          PopupPageModel: PopupPage.Model
+          PageTransitionsPageModel: PageTransitionsPage.Model
+          RepeatButtonPageModel: RepeatButtonPage.Model
+          RadioButtonPageModel: RadioButtonPage.Model
+          RefreshContainerPageModel: RefreshContainerPage.Model
+          SelectableTextBlockPageModel: SelectableTextBlockPage.Model
+          SplitButtonPageModel: SplitButtonPage.Model
+          SliderPageModel: SliderPage.Model
+          ShapesPageModel: ShapesPage.Model
+          ScrollBarPageModel: ScrollBarPage.Model
+          SplitViewPageModel: SplitViewPage.Model
+          StackPanelPageModel: StackPanelPage.Model
+          StylesPageModel: StylesPage.Model
+          ScrollViewerPageModel: ScrollViewerPage.Model
+          ToggleSplitButtonPageModel: ToggleSplitButtonPage.Model
+          TextBlockPageModel: TextBlockPage.Model
+          TextBoxPageModel: TextBoxPage.Model
+          TickBarPageModel: TickBarPage.Model
+          ToggleSwitchPageModel: ToggleSwitchPage.Model
+          ToggleButtonPageModel: ToggleButtonPage.Model
+          ToolTipPageModel: ToolTipPage.Model
+          TabControlPageModel: TabControlPage.Model
+          TabStripPageModel: TabStripPage.Model
+          TransitionsPageModel: TransitionsPage.Model
+          TransformsPageModel: TransformsPage.Model
+          ThemeAwarePageModel: ThemeAwarePage.Model
+          UniformGridPageModel: UniformGridPage.Model
+          ViewBoxPageModel: ViewBoxPage.Model
           ThemeVariants: ThemeVariant list
           FlowDirections: FlowDirection list
           TransparencyLevels: WindowTransparencyLevel list }
 
     type Msg =
-        | SubpageMsg of SubpageMsg
         | AcrylicPageMsg of AcrylicPage.Msg
         | AdornerLayerPageMsg of AdornerLayerPage.Msg
         | AutoCompleteBoxPageMsg of AutoCompleteBoxPage.Msg
@@ -177,7 +174,7 @@ module Types =
         | ThemeVariantsOnSelectionChanged of SelectionChangedEventArgs
         | FlowDirectionsOnSelectionChanged of SelectionChangedEventArgs
         | TransparencyLevelsOnSelectionChanged of SelectionChangedEventArgs
-        
+
     type SubpageCmdMsg =
         | AcrylicPageCmdMsgs of AcrylicPage.CmdMsg list
         | AdornerLayerPageCmdMsgs of AdornerLayerPage.CmdMsg list
